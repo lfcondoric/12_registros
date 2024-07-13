@@ -9,7 +9,7 @@ int main(){
 	float sueldo;
 	}empleado[100];
 
-	cout<<"Ingrese la cantidad de empleado a registrar en DataTech: ";cin>>n;
+	cout<<"Ingrese la cantidad de empleados a registrar en DataTech: ";cin>>n;
 	
 	for(int i=0;i<n;i++){
 		cout<<"INGRESE LOS DATOS DEL EMPLEADO "<<i+1<<": \n";
@@ -19,11 +19,13 @@ int main(){
 			if(empleado[i].sueldo<menor){
 				menor=empleado[i].sueldo;
 				me=i;
-			} else{
+			}
+			if(empleado[i].sueldo>mayor){
 				mayor=empleado[i].sueldo;
 				ma=i;
 			}	
 	}
+
 	cout<<"El empleado con menor sueldo es: "<<empleado[me].nombre<<endl;
 	cout<<"Su sueldo es: "<<empleado[me].sueldo<<endl;
 	cout<<"El empleado con mayor sueldo es: "<<empleado[ma].nombre<<endl;
