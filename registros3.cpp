@@ -13,23 +13,25 @@ int main(){
 		FECHA nacimiento;
 	}prs[100];
 	
-	cin>>n;
+	cout<<"Ingrese la cantidad de personas a registrar: ";cin>>n;
 	for(int i=0;i<n;i++){
-		cin>>prs[i].nombre;
-		cin>>prs[i].nacimiento.dia;
-		cin>>prs[i].nacimiento.mes;
-		cin>>prs[i].nacimiento.ano;		
+		cout<<"\t\t\tIngrese los datos de la persona "<<i+1<<":"<<endl;
+		cout<<"Nombre: ";cin>>prs[i].nombre;
+		cout<<"Dia de nacimiento: ";cin>>prs[i].nacimiento.dia;
+		cout<<"Mes de nacimiento: ";cin>>prs[i].nacimiento.mes;
+		cout<<"Ano de nacimiento: ";cin>>prs[i].nacimiento.ano;		
 	}
-	
+	cout<<endl;
 	do{
-		cin>>ms;
+		cout<<"Ingrese mes:";cin>>ms;cout<<endl;
 		if(ms!=0){
 			for(int i=0;i<n;i++){
 				if(ms==prs[i].nacimiento.mes){
-					cout<<prs[i].nombre;
-					cout<<prs[i].nacimiento.dia;
-					cout<<prs[i].nacimiento.mes;
-					cout<<prs[i].nacimiento.ano;
+					cout<<"La persona que cumple anos en ese mes es: \n";
+					cout<<"Nombre: "<<prs[i].nombre<<endl;
+					cout<<"Dia de nacimiento: "<<prs[i].nacimiento.dia<<endl;
+					cout<<"Mes de nacimiento: "<<prs[i].nacimiento.mes<<endl;
+					cout<<"Ano de nacimiento: "<<prs[i].nacimiento.ano<<endl;
 					c++;		
 				}
 			}
@@ -38,5 +40,6 @@ int main(){
 			}	
 		}
 	}while(ms!=0);
+	cout<<"Mes incorrecto: \n";
 	return 0;
 }
